@@ -1,0 +1,558 @@
+:root {
+    --main-header-color: #EEE0DD;
+}
+
+#container {
+    width: 100%;
+}
+
+.main_header {
+    
+    height: 1000px;
+
+    background: url(../image/railway-g0b0b012f3_1280.jpg) no-repeat 0 0;
+    background-size: cover;
+}
+
+.main_header_in {
+    margin: 0px auto;
+    padding-top: 200px;
+
+    width: 1400px;
+}
+
+.header_in {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 550px;
+
+}
+
+.header_in h1 {
+    font-size: 70px;
+    color: var(--main-header-color);
+}
+
+.introduce {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 300px;
+}
+
+.introduce p {
+    font-size: 40px;
+
+    color: var(--main-header-color);
+}
+
+
+/* main2 */
+.about_me {
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 1400px;
+    height: 1000px;
+}
+
+.informaition {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 50px;
+    
+}
+
+
+.informaition img {
+    width: 500px;
+    height: 400px;
+}
+
+.informaition_in {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 400px;
+}
+
+.informaition_in h1 {
+    font-size: 70px;
+}
+
+.informaition_in ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding-top: 50px;
+
+    height: 400px;
+}
+
+.informaition_in li {
+    font-size: 25px;
+}
+
+
+
+.git_intro_group {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 50px;
+}
+
+.git_blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    height: 450px;
+
+}
+
+.git_address {
+    display: flex;
+    align-items: center;
+
+}
+
+.git_address p {
+    padding-left: 20px;
+
+    font-size: 20px;
+}
+
+.blog_address {
+    display: flex;
+    align-items: center;
+}
+
+.blog_address p {
+    padding-left: 20px;
+
+    font-size: 20px;
+
+}
+
+.purpose {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.purpose li {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* main3 */
+
+.skills_main {
+    background-color: rgb(226, 209, 183);
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin: 0px auto;
+    
+    width: 1400px;
+    height: 1000px;
+
+    text-align: center;
+
+    
+   
+}
+
+.skills h1{
+    padding-top: 50px;
+
+    font-size: 70px;
+}
+
+.skills h3 {
+     font-size: 40px;
+}
+
+.major_skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 300px;
+}
+
+/* skill css */
+
+.container_article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.container
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.container .card
+{
+    position: relative;
+    width: 220px;
+    height: 250px;
+    background: #2a2a2a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .card .percent
+{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+.container .card .percent svg
+{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
+.container .card .percent svg circle
+{
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 2;
+    stroke: #191919;
+    transform: translate(5px,5px);
+}
+.container .card .percent svg circle:nth-child(2)
+{
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+    stroke-dashoffset: calc(440 - (440 * var(--num)) /100);
+    animation : fadeIn 2s linear forwards;
+
+}
+@keyframes fadeIn
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+.dot
+{
+    position: absolute;
+    inset: 5px;
+    z-index: 10;
+    /* 360deg / 100 = 3.6 */
+    animation: animateDot 2s linear forwards;
+}
+@keyframes animateDot
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(calc(3.6deg * var(--num)));
+    }
+}
+.dot::before
+{
+    content:'';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--clr);
+    box-shadow: 0 0 10px var(--clr),
+    0 0 30px var(--clr);
+}
+.number
+{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 1.5s;
+}
+.number h2
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 2.5em;
+}
+.number h2 span
+{
+    font-weight: 300;
+    color: #fff;
+    font-size: 0.5em;
+}
+.number p
+{
+    font-weight: 300;
+    font-size: 0.75em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255, 255, 0.75);
+}
+
+.other_skills {
+    display: flex;
+    flex-direction: column;
+
+    height: 300px;
+}
+
+.other_skills_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 20px;
+    padding: 50px;
+
+}
+
+.other_skills_img li {
+    width: 80px;
+    
+}
+
+/* main4 */
+
+.portfolio_main{
+    background-color: rgb(179, 222, 248);
+}
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin: 0px auto;
+
+    width: 1400px;
+    height: 1000px;
+}
+
+.portfolio h1 {
+    padding-top: 50px;
+
+    font-size: 70px;
+
+    text-align: center;
+}
+
+.portfolio_in {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    height: 800px;
+}
+
+.project {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project_name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;   
+}
+
+.project_name h3 {
+    font-size: 20px;
+}
+
+.project_name span {
+    font-size: 12px;
+
+    font-weight: 100;
+}
+
+.project_git_img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 250px;
+}
+
+.cloneimg {
+    width: 300px;
+    height: 150px;
+}
+
+/* footer */
+
+footer {
+    background-color: #F3E7E6;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0px auto;
+
+    width: 1400px;
+    height: 1000px;
+}
+
+
+.footer h1 {
+    font-size: 70px;
+    text-align: center;
+}
+
+.footer h3 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.contact_sns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 50px;
+    height: 500px;
+
+}
+
+.contact_group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 200px;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    width: 300px;
+    height: 200px;
+}
+
+.contact p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.contact_number {
+    margin-right: 50px;
+}
+
+.email {
+    width: 40px;
+    height: 40px;
+}
+
+.phone_number {
+    width: 26px;
+    height: 44px;
+}
+
+.sns_group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 200px;
+    height: 500px;
+}
+
+.sns{
+    width: 80px;
+    height: 80px;
+}
+
+aside {
+    position: absolute;
+    top: 400px;
+    right: 150px;
+
+    color: #fff;
+}
+
+aside li {
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+
+/* js */
+
+
+.informaition_email_link {
+    cursor: pointer;
+    
+    color: deepskyblue;
+    text-decoration: underline;
+}
+
+.git_address_link {
+    cursor: pointer;
+
+    color: deepskyblue;
+    text-decoration: underline;
+
+}
+
+.blog_address_link {
+    cursor: pointer;
+    
+    color: deepskyblue;
+    text-decoration: underline;
+}
+
