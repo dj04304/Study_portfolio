@@ -148,6 +148,7 @@
     flex-direction: column;
     justify-content: space-between;
 
+    padding-bottom: 30px;
 }
 
 .purpose li {
@@ -193,6 +194,10 @@
     justify-content: space-between;
 
     height: 300px;
+}
+
+.major_skills h3 {
+    margin-bottom: 50px;
 }
 
 /* skill css */
@@ -355,6 +360,10 @@
     
 }
 
+.other_skills_img img {
+    width: 50px;
+}
+
 /* main4 */
 
 .portfolio_main{
@@ -392,6 +401,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.project:last-child {
+    padding-bottom: 30px;
 }
 
 .project_name {
