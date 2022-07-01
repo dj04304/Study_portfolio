@@ -4,6 +4,7 @@ const firstTop = contents[0].offsetTop;
 const secondTop = contents[1].offsetTop;
 const thirdTop = contents[2].offsetTop;
 const fourthTop = contents[3].offsetTop;
+const fifthTop = contents[4].offsetTop;
 
 console.log(contents);
 console.log(asideMenu);
@@ -22,6 +23,10 @@ asideMenu[2].onclick = () => {
 
 asideMenu[3].onclick = () => {
     window.scroll({top:fourthTop, behavior: 'smooth'})
+}
+
+asideMenu[4].onclick = () => {
+    window.scroll({top:fifthTop, behavior: 'smooth'})
 }
 
 for(let i = 0; i < asideMenu.length; i++){
